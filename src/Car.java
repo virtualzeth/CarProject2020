@@ -10,4 +10,8 @@ public class Car {
         active = (keyCode == "ssg5OjMoG4") ? true : false;
         return active;
     }
+    public static boolean stopEngine() {
+        active = false;
+        return active;
+    }
 }
