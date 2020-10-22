@@ -7,6 +7,7 @@ public class Car {
     String name = "Default - car";
     boolean active = false;
     int currentSpeed = 0;
+    String gear = "N";
 
     static Scanner sc = new Scanner(System.in);
 
@@ -18,6 +19,10 @@ public class Car {
     public boolean stopEngine() {
         this.active = false;
         return this.active;
+    }
+
+    public String changeGear(String newGear) {
+        return this.gear;
     }
 
     public void userInterface() {
