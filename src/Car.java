@@ -34,7 +34,7 @@ public class Car {
                 System.out.println("Please enter password:");
                 String password = sc.next();
                 this.startEngine(password);
-                String msg = (this.active) ? ">The engine is on" : "Incorrect password!";
+                String msg = (this.active) ? "> The engine is on" : "> Incorrect password!";
                 System.out.println(msg + "\n");
             } else if (input.equals("speed")) {
                 System.out.println(String.format("The cars current speed: %s km/t\n", this.currentSpeed));
