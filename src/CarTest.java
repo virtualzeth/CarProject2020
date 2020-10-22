@@ -3,10 +3,10 @@
  */
 public class CarTest {
     public static void main(String[] args) {
-        Car car = new Car();
+        Car car = new Car("Qweqwe", "1234");
 
-        booleanAssertEquals("Test startEngine: wrong key", false, car.startEngine("1234"));
-        booleanAssertEquals("Test startEngine: correct key", true, car.startEngine("ssg5OjMoG4"));
+        booleanAssertEquals("Test startEngine: wrong key", false, car.startEngine("qwe"));
+        booleanAssertEquals("Test startEngine: correct key", true, car.startEngine("1234"));
         booleanAssertEquals("Test stopEngine", false, car.stopEngine());
 
         stringAssertEquals("Test changeGear", "R", car.changeGear("R"));
