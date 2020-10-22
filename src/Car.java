@@ -4,7 +4,7 @@ import java.util.*;
  * Car
  */
 public class Car {
-    private String name = "Default - car";
+    private String name = "Car";
     private String key = "1234";
     private boolean active = false;
     private int currentSpeed = 0;
