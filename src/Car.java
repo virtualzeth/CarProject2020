@@ -1,35 +1,46 @@
 import java.util.*;
+
 /**
  * Car
  */
 public class Car {
+    String name = "Default - car";
+    boolean active = false;
+    int currentSpeed = 0;
+
     static Scanner sc = new Scanner(System.in);
 
-    private static boolean active = false;
-    static int currentSpeed = 0;
+    public boolean startEngine(String keyCode) {
+        this.active = (keyCode.equals("ssg5OjMoG4")) ? true : false;
+        return this.active;
+    }
 
-    public static void userInterface() {
+    public boolean stopEngine() {
+        this.active = false;
+        return this.active;
+    }
+
+    public void userInterface() {
         boolean gate = true;
-        while(gate) {
-            System.out.println("Check current speed (cmd: exit)");
-            System.out.println("Exit (cmd: exit)");
+        while (gate) {
+            System.out.println("Start engine (cmd: start");
+            System.out.println("Check current speed (cmd: speed)");
+            System.out.println("Exit (cmd: exit)\n");
             String input = sc.next().toLowerCase();
 
-            if(input.equals("exit")) {
+            if (input.equals("exit")) {
                 gate = false;
-            } else if(input.equals("speed")) {
-                System.out.println(String.format("The cars current speed: %i km/t", currentSpeed));
+            } else if (input.equals("start")) {
+                System.out.println("Please enter password:");
+                String password = sc.next();
+                this.startEngine(password);
+                String msg = (this.active) ? ">The engine is on" : "Incorrect password!";
+                System.out.println(msg + "\n");
+            } else if (input.equals("speed")) {
+                System.out.println(String.format("The cars current speed: %s km/t\n", this.currentSpeed));
             } else {
                 System.out.println("Input error - try again..");
             }
         }
-    }
-    public static boolean startEngine(String keyCode) {
-        active = (keyCode == "ssg5OjMoG4") ? true : false;
-        return active;
-    }
-    public static boolean stopEngine() {
-        active = false;
-        return active;
     }
 }
