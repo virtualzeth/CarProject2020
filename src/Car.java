@@ -4,7 +4,6 @@ import java.util.*;
  * Car
  */
 public class Car {
-    private String name = "Car";
     private String key = "1234";
     private boolean active = false;
     private int currentSpeed = 0;
@@ -13,8 +12,7 @@ public class Car {
 
     static Scanner sc = new Scanner(System.in);
 
-    public Car(String name, String key) {
-        this.name = name;
+    public Car(String key) {
         this.key = key;
     }
 
